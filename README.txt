@@ -2,6 +2,36 @@ USING NUNIT V3 FOR THE UNIT TESTS
 
 The Project is setup to Run on port 61063 and should automatically open the url -> http://localhost:61063/swagger
 
+Added some initial data for api testing purposes:
+
+ var basketDefault = new ShoppingBasket
+            {
+                BasketId = 1,
+                CustomerId = 1
+            };
+
+            basketDefault.OrderItems.Add(new ShoppingBasketItem
+            {
+                ItemId = 1,
+                ProductName = "Red Rising Hardcover Book",
+                ProductId = 123,
+                Price = 15.00m,
+                Quantity = 1
+            });
+
+            basketDefault.OrderItems.Add(new ShoppingBasketItem
+            {
+                ItemId = 2,
+                ProductName = "Lord Of The Rings",
+                ProductId = 456,
+                Price = 15.00m,
+                Quantity = 1
+            });
+
+
+So you should be able to retrieve that basket to play around in Swagger.
+
+
 SOME IMPROVEMENTS I WOULD DO IF I HAD MORE TIME / IF IT WAS REAL PRODUCTION PROJECT
 
 
